@@ -3,11 +3,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faV } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
-function Navbar() {
+function NavbarComponent() {
   return (
     <nav>
       <div className="navigation-logo">
-        <FontAwesomeIcon icon={faV} size={"xl"} color={"white"} />
+        <FontAwesomeIcon icon={faV} size={"l"} color={"white"} />
         <a href="brand">alentina</a>
       </div>
       <div className="navigation-menu">
@@ -25,4 +25,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default NavbarComponent;

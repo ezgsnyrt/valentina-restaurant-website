@@ -5,13 +5,13 @@ import './App.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider, } from "react-router-dom";
-import About from './pages/About';
-import Blog from './pages/Blog';
-import Contact from './pages/Contact';
-import Home from './pages/Home';
-import Menu from './pages/Menu';
-import Reservation from './pages/Reservation';
-import Services from './pages/Services';
+import AboutPage from './pages/AboutPage';
+import BlogPage from './pages/BlogPage';
+import ContactPage from './pages/ContactPage';
+import HomePage from './pages/HomePage';
+import MenuPage from './pages/MenuPage.jsx';
+import ReservationPage from './pages/ReservationPage.jsx';
+import ServicesPage from './pages/ServicesPage.jsx';
 
 
 const router = createBrowserRouter([
@@ -21,31 +21,31 @@ const router = createBrowserRouter([
   },
   {
     path: "about",
-    element: <About />,
+    element: <AboutPage />,
   },
   {
     path: "blog",
-    element: <Blog />,
+    element: <BlogPage />,
   },
   {
     path: "contact",
-    element: <Contact />,
+    element: <ContactPage />,
   },
   {
     path: "home",
-    element: <Home />,
+    element: <HomePage />,
   },
   {
     path: "menu",
-    element: <Menu />,
+    element: <MenuPage />,
   },
   {
     path: "reservation",
-    element: <Reservation />,
+    element: <ReservationPage />,
   },
   {
     path: "services",
-    element: <Services />,
+    element: <ServicesPage />,
   },
 ]);
 

@@ -1,11 +1,11 @@
 import React from "react";
-import Navbar from "./Navbar";
+import NavbarComponent from "./NavbarComponent";
 import Carousel from "react-bootstrap/Carousel";
 
-function Header() {
+function HeaderComponent() {
   return (
     <header>
-      <Navbar />
+      <NavbarComponent />
       <Carousel data-bs-theme="dark">
         <Carousel.Item interval={6000}>
           <img
@@ -47,7 +47,7 @@ function Header() {
   );
 }
 
-export default Header;
+export default HeaderComponent;
 
 // Photo by <a href="https://unsplash.com/@lepalacemarrakech?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Le Palace Marrakech</a> on <a href="https://unsplash.com/photos/a-woman-sitting-at-a-table-with-wine-glasses-iR7i9klCjnQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 // Photo by <a href="https://unsplash.com/@jaywennington?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Jay Wennington</a> on <a href="https://unsplash.com/photos/dish-on-white-ceramic-plate-N_Y88TWmGwA?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
