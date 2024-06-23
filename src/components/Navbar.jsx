@@ -7,7 +7,7 @@ function Navbar() {
   return (
     <nav>
       <div className="navigation-logo">
-        <FontAwesomeIcon icon={faV} size={"xl"} />
+        <FontAwesomeIcon icon={faV} size={"xl"} color={"white"} />
         <a href="brand">alentina</a>
       </div>
       <div className="navigation-menu">
