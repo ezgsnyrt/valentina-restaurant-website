@@ -1,6 +1,6 @@
 @use '../public/styles/fonts';
 @use '../public/styles/colors';
-@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Italianno&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
 @import '../node_modules/normalize-scss/sass/normalize';
 //other components scss
@@ -159,3 +159,26 @@ header {
     }
   }
 }
+
+.section-title {
+  font-size: fonts.$xxlarge-font-size;
+  font-family: fonts.$subtitle-font-family;
+  letter-spacing: fonts.$small-letter-spacing;
+}
+
+.section-subtitle {
+  font-size: fonts.$medium-font-size;
+  font-family: fonts.$primary-font-family;
+  font-weight: fonts.$normal-font-weight;
+  letter-spacing: fonts.$xsmall-letter-spacing;
+}
+
+.section-explanation {
+  font-size: fonts.$small-font-size;
+  font-family: fonts.$text-font-family;
+  font-weight: fonts.$text-font-weight;
+}
+#section-about {
+
+}
+

@@ -7,15 +7,15 @@ function HeaderComponent() {
     <header>
       <NavbarComponent />
       <Carousel data-bs-theme="dark">
-        <Carousel.Item interval={6000}>
+        <Carousel.Item interval={10000}>
           <img
             className="d-block w-100"
             src=".././assets/header-image-one.jpg"
             alt="First slide"
           />
           <Carousel.Caption>
-            <h5>First slide label</h5>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            <h5>Valentina Restaurant</h5>
+            <p>Where culinary artistry meets extraordinary dining experiences</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item interval={6000}>
@@ -24,10 +24,6 @@ function HeaderComponent() {
             src=".././assets/header-image-two.jpg"
             alt="Second slide"
           />
-          <Carousel.Caption>
-            <h5>Second slide label</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item interval={6000}>
           <img
@@ -35,12 +31,6 @@ function HeaderComponent() {
             src=".././assets/header-image-three.jpg"
             alt="Third slide"
           />
-          <Carousel.Caption>
-            <h5>Third slide label</h5>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
-          </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item interval={6000}>
           <img
@@ -48,12 +38,6 @@ function HeaderComponent() {
             src=".././assets/header-image-four.jpg"
             alt="Fourth slide"
           />
-          <Carousel.Caption>
-            <h5>Fourth slide label</h5>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
-          </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
     </header>
