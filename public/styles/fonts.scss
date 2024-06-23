@@ -1,16 +1,21 @@
 //Font families
-$primary-font-family: "Montserrat", sans-serif;
+$primary-font-family: "Alegreya Sans SC", sans-serif;
+$subheader-font-family: "Montserrat", sans-serif;
 $logo-font-family: "Playfair Display", serif;
+$text-font-family: "Open Sans", sans-serif;
 
 //Font Sizes
+$xlarge-font-size: 3rem;
+$large-font-size: 2.2rem;
 $medium-font-size: 1.7rem;
-$small-font-size: 1.1rem;
+$small-font-size: 1.2rem;
 
 //Font Weights
 $bold-font-weight: 800;
 $semi-bold-font-weight: 600;
 $normal-font-weight: 500;
 
-//Letter Spacing
-$small-letter-spacing: 0.12rem;
 
+//Letter Spacing
+$xsmall-letter-spacing: 0.2rem;
+$small-letter-spacing: 0.3rem;
