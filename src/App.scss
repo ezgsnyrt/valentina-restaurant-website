@@ -270,7 +270,15 @@ header {
   }
 }
 
-// Services Styles
+// Chef Section Styles
+#section-chef {
+  height: 100vh;
+  background-color: colors.$main-background;
+  color: colors.$primary-color;
+}
+
+
+// Services Section Styles
 #section-service {
   display: flex;
   justify-content: center;
