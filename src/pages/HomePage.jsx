@@ -1,7 +1,7 @@
 import React from 'react';
-// import NavbarComponent from "../components/NavbarComponent";
 import HeaderComponent from "../components/HeaderComponent";
 import AboutComponent from "../components/AboutComponent";
+import ServiceComponent from '../components/ServiceComponent';
 
 
 function HomePage(){
@@ -9,6 +9,7 @@ function HomePage(){
     <div>
       <HeaderComponent />
       <AboutComponent />
+      <ServiceComponent />
       <div>Home Page</div>
     </div>
   )

@@ -8,28 +8,23 @@ import Button from 'react-bootstrap/Button';
 function AboutComponent () {
   return (
     <section id="section-about">
+      <h2 className="section-title">About Valentina</h2>
       <Container className="section-container">
-        <Row className="upper-section-container">
-          <Col>
-            <h2 className="section-title">About Valentina</h2>
-          </Col>
-        </Row>
         <Row className="bottom-section-container">
           <Col className="inner-container-left">
             <h4 className="section-subtitle">The Art of Culinary Expression </h4>
-            <p className="section-explanation">At Valentina Resraurant, where culinary artistry meets extraordinary
-            dining experiences, an exclusive dining experience awaits you. Here, the bold Italian cuisine menu comes
-            to life with an exceptionally elegant decoration. </p>
+            <p className="section-explanation">At Valentina, an exclusive dining experience awaits you.
+            Here, the bold Italian cuisine menu comes to life with an exceptionally elegant decoration. </p>
             <p className="section-explanation">Discover Valentina, where you can experience the richness of Italian
             cuisine in its most magnificent form; a place where grand design, elegance, and culinary tradition come
             together in perfect harmony. Every detail is designed to make your visit unforgettable and leave you with
             lasting memories. </p>
-            <p className="section-explanation">At Valentina, enjoy a unique menu crafted with Italian ingredients and
+            <p className="section-explanation">Valentina invites you to enjoy a unique menu crafted with Italian ingredients and
             savor an extraordinary Italian dining experience in this splendid atmosphere with your loved ones. </p>
-            <p className="section-explanation">At Valentina, which boasts a bold cuisine, indulge in the finest Italian
-            dishes thoughtfully crafted with high-quality ingredients and enriched with robust, authentic flavors that
-            cater to different palates. Besides the exquisite meals, you are also invited to try the signature cocktails!
-            With three distinguished locations in Sweden, your gourmet meal is always within reach.</p>
+            <p className="section-explanation">Experience Valentina's bold Italian cuisine featuring meticulously crafted dishes
+            using high-quality ingredients and robust, authentic flavors that cater to diverse tastes. Alongside our exquisite
+            meals, savor our signature cocktails! With three distinguished locations across Sweden, gourmet dining is always just
+            around the corner.</p>
             <Button variant="primary">LEARN MORE</Button>{' '}
           </Col>
           <Col className="inner-container-right">
