@@ -164,6 +164,7 @@ header {
   font-size: fonts.$xxlarge-font-size;
   font-family: fonts.$subtitle-font-family;
   letter-spacing: fonts.$small-letter-spacing;
+  padding: 5%;
 }
 
 .section-subtitle {
@@ -171,14 +172,96 @@ header {
   font-family: fonts.$primary-font-family;
   font-weight: fonts.$normal-font-weight;
   letter-spacing: fonts.$xsmall-letter-spacing;
+  padding-bottom: 2%;
+  text-align: start;
 }
 
 .section-explanation {
   font-size: fonts.$small-font-size;
   font-family: fonts.$text-font-family;
   font-weight: fonts.$text-font-weight;
+  text-align: justify;
+  line-height: fonts.$small-line-height;
 }
-#section-about {
 
+//About Section Styles
+
+#section-about {
+  width: 100%;
+  height: 100vh;
+
+  .section-container {
+    height: 100%;
+    width: 100%;
+
+    .upper-section-container {
+      height: 20%;
+    }
+
+    .bottom-section-container {
+      height: 80%;
+
+      .inner-container-left {
+        padding-right: 5%;
+
+        .section-explanation {
+          margin-bottom: 3%;
+        }
+      }
+
+      .inner-container-right {
+        height: 100%;
+        padding-left: 2%;
+
+        .container-image {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  button {
+    min-width: 12rem;
+    height: 3.5rem;
+    padding: 0.5rem 1rem;
+    margin-top: 5%;
+    font-family: fonts.$primary-font-family;
+    font-weight: fonts.$text-font-weight;
+    letter-spacing: fonts.$xsmall-letter-spacing;
+    font-size: fonts.$xsmall-font-size;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 0;
+    z-index: 0;
+    background: colors.$button-color;
+    overflow: hidden;
+    border: 2px solid #012a4a;
+    color: colors.$primary-color;
+
+    &:hover {
+      color: colors.$primary-color;
+
+      &:after {
+        height: 100%;
+      }
+    }
+
+    &:after {
+      content: "";
+      width: 100%;
+      height: 0;
+      position: absolute;
+      z-index: -1;
+      transition: all 0.3s ease;
+      left: 0;
+      bottom: 0;
+      background: colors.$button-hover-color;
+    }
+  }
 }
+
 

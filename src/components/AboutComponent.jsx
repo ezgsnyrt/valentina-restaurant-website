@@ -8,14 +8,14 @@ import Button from 'react-bootstrap/Button';
 function AboutComponent () {
   return (
     <section id="section-about">
-      <Container>
-        <Row>
+      <Container className="section-container">
+        <Row className="upper-section-container">
           <Col>
             <h2 className="section-title">About Valentina</h2>
           </Col>
         </Row>
-        <Row>
-          <Col>
+        <Row className="bottom-section-container">
+          <Col className="inner-container-left">
             <h4 className="section-subtitle">The Art of Culinary Expression </h4>
             <p className="section-explanation">At Valentina Resraurant, where culinary artistry meets extraordinary
             dining experiences, an exclusive dining experience awaits you. Here, the bold Italian cuisine menu comes
@@ -32,8 +32,8 @@ function AboutComponent () {
             With three distinguished locations in Sweden, your gourmet meal is always within reach.</p>
             <Button variant="primary">LEARN MORE</Button>{' '}
           </Col>
-          <Col>
-            <Image src=".././assets/about-image-one.jpg" fluid />
+          <Col className="inner-container-right">
+            <Image className="container-image" src=".././assets/about-image-one.jpg" fluid />
           </Col>
         </Row>
       </Container>
