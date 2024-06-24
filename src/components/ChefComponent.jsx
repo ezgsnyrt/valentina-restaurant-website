@@ -9,64 +9,66 @@ function ChefComponent () {
   return(
     <section id="section-chef">
       <h2 className="section-title">Master Chefs</h2>
-      <CardGroup>
-      <Card>
-        <Card.Img variant="top" src=".././assets/chef-image-one.jpg" />
-        <Card.Body>
-          <Card.Title>Luca Bianchi</Card.Title>
-          <Card.Text>
-            Executive Chef
-          </Card.Text>
-          <Card.Text>
-            <FontAwesomeIcon icon={faFacebookF} size={"xl"} color={"black"} />
-            <FontAwesomeIcon icon={faSquareInstagram} size={"xl"} color={"black"} />
-            <FontAwesomeIcon icon={faSquareYoutube} size={"xl"} color={"black"} />
-          </Card.Text>
-        </Card.Body>
-      </Card>
-      <Card>
-        <Card.Img variant="top" src=".././assets/chef-image-two.jpg" />
-        <Card.Body>
-          <Card.Title>Marco Rossi</Card.Title>
-          <Card.Text>
-            Kitchen Leader
-          </Card.Text>
-          <Card.Text>
-            <FontAwesomeIcon icon={faFacebookF} size={"xl"} color={"black"} />
-            <FontAwesomeIcon icon={faSquareInstagram} size={"xl"} color={"black"} />
-            <FontAwesomeIcon icon={faSquareYoutube} size={"xl"} color={"black"} />
-          </Card.Text>
-        </Card.Body>
-      </Card>
-      <Card>
-        <Card.Img variant="top" src=".././assets/chef-image-three.jpg" />
-        <Card.Body>
-          <Card.Title>Isabella Romano</Card.Title>
-          <Card.Text>
-            Pastry Chef
-          </Card.Text>
-          <Card.Text>
-            <FontAwesomeIcon icon={faFacebookF} size={"xl"} color={"black"} />
-            <FontAwesomeIcon icon={faSquareInstagram} size={"xl"} color={"black"} />
-            <FontAwesomeIcon icon={faSquareYoutube} size={"xl"} color={"black"} />
-          </Card.Text>
-        </Card.Body>
-      </Card>
-      <Card>
-        <Card.Img variant="top" src=".././assets/chef-image-four.jpg" />
-        <Card.Body>
-          <Card.Title>Alessandro Moretti</Card.Title>
-          <Card.Text>
-            Commis Chef
-          </Card.Text>
-          <Card.Text>
-            <FontAwesomeIcon icon={faFacebookF} size={"xl"} color={"black"} />
-            <FontAwesomeIcon icon={faSquareInstagram} size={"xl"} color={"black"} />
-            <FontAwesomeIcon icon={faSquareYoutube} size={"xl"} color={"black"} />
-          </Card.Text>
-        </Card.Body>
-      </Card>
-    </CardGroup>
+      <div className="general-card-container">
+        <CardGroup>
+          <Card>
+            <Card.Img variant="top" src=".././assets/chef-image-one.jpg" />
+            <Card.Body>
+              <Card.Title>Luca Bianchi</Card.Title>
+              <Card.Text>
+                Executive Chef
+              </Card.Text>
+              <Card.Text>
+                <FontAwesomeIcon icon={faFacebookF} size={"xl"} color={"black"} />
+                <FontAwesomeIcon icon={faSquareInstagram} size={"xl"} color={"black"} />
+                <FontAwesomeIcon icon={faSquareYoutube} size={"xl"} color={"black"} />
+              </Card.Text>
+            </Card.Body>
+          </Card>
+          <Card>
+            <Card.Img variant="top" src=".././assets/chef-image-two.jpg" />
+            <Card.Body>
+              <Card.Title>Marco Rossi</Card.Title>
+              <Card.Text>
+                Kitchen Leader
+              </Card.Text>
+              <Card.Text>
+                <FontAwesomeIcon icon={faFacebookF} size={"xl"} color={"black"} />
+                <FontAwesomeIcon icon={faSquareInstagram} size={"xl"} color={"black"} />
+                <FontAwesomeIcon icon={faSquareYoutube} size={"xl"} color={"black"} />
+              </Card.Text>
+            </Card.Body>
+          </Card>
+          <Card>
+            <Card.Img variant="top" src=".././assets/chef-image-three.jpg" />
+            <Card.Body>
+              <Card.Title>Isabella Romano</Card.Title>
+              <Card.Text>
+                Pastry Chef
+              </Card.Text>
+              <Card.Text>
+                <FontAwesomeIcon icon={faFacebookF} size={"xl"} color={"black"} />
+                <FontAwesomeIcon icon={faSquareInstagram} size={"xl"} color={"black"} />
+                <FontAwesomeIcon icon={faSquareYoutube} size={"xl"} color={"black"} />
+              </Card.Text>
+            </Card.Body>
+          </Card>
+          <Card>
+            <Card.Img variant="top" src=".././assets/chef-image-four.jpg" />
+            <Card.Body>
+              <Card.Title>Alessandro Moretti</Card.Title>
+              <Card.Text>
+                Commis Chef
+              </Card.Text>
+              <Card.Text>
+                <FontAwesomeIcon icon={faFacebookF} size={"xl"} color={"black"} />
+                <FontAwesomeIcon icon={faSquareInstagram} size={"xl"} color={"black"} />
+                <FontAwesomeIcon icon={faSquareYoutube} size={"xl"} color={"black"} />
+              </Card.Text>
+            </Card.Body>
+          </Card>
+        </CardGroup>
+      </div>
     </section>
   );
 }
