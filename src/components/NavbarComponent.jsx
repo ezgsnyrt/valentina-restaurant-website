@@ -7,7 +7,7 @@ function NavbarComponent() {
   return (
     <nav>
       <div className="navigation-logo">
-        <FontAwesomeIcon icon={faV} size={"l"} color={"white"} />
+        <FontAwesomeIcon icon={faV} size={"lg"} color={"white"} />
         <a href="brand">ALENTINA</a>
       </div>
       <div className="navigation-menu">
