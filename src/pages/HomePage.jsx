@@ -4,6 +4,7 @@ import AboutComponent from "../components/AboutComponent";
 import ServiceComponent from '../components/ServiceComponent';
 import ChefComponent from '../components/ChefComponent';
 import SpecialitiesComponent from '../components/SpecialitiesComponent';
+import ReservationComponent from '../components/ReservationComponent';
 import { useState } from 'react';
 
 
@@ -46,6 +47,7 @@ function HomePage(){
       <ChefComponent />
       <SpecialitiesComponent articles={articles} />
       <ServiceComponent />
+      <ReservationComponent />
       <div>Home Page</div>
     </div>
   )
