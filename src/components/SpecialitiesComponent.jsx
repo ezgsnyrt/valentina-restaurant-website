@@ -49,7 +49,7 @@ function SpecialitiesComponent ({articles}) {
                   </div>
                   <div className="card-profile-info">
                     <h2>Food Name</h2>
-                    <p>Image description here</p>
+                    <p>Flavor description here</p>
                   </div>
                 </div>
               </article>
