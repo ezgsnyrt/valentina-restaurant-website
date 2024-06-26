@@ -334,90 +334,100 @@ header {
 }
 
 // Specialities Section Styles
+#section-specialities {
+  background-image: url('../public/assets/background1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
 
-#section-specialities .bottom-row {
-  width: 100%;
-  min-height: 70vh;
-  display: grid;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  place-items: center;
-  letter-spacing: 0.025rem;
+  .bottom-row {
+    width: 100%;
+    min-height: 75vh;
+    display: grid;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    place-items: center;
+    letter-spacing: fonts.$xxsmall-letter-spacing;
 
-  .bottom-col {
-    display: flex;
-    gap: 0.5rem;
-    padding: 1rem 0;
-
-    .image-card {
-      position: relative;
-      height: 31.25rem;
-      width: 4rem;
+    .bottom-col {
       display: flex;
-      align-items: flex-end;
-      background: #fff;
-      border-radius: 2.25rem;
-      overflow: hidden;
-      opacity: 0.85;
-      transition: 0.5s;
-      cursor: pointer;
+      gap: 0.5rem;
+      padding: 1rem 0;
 
-      &.active {
-        opacity: 1;
-        width: 30rem;
+      .image-card {
+        position: relative;
+        height: 40rem;
+        width: 7rem;
+        display: flex;
+        align-items: flex-end;
+        background: #fff;
+        border-radius: 2.25rem;
+        overflow: hidden;
+        opacity: 0.85;
+        transition: 0.5s;
+        cursor: pointer;
+
+        &.active {
+          opacity: 1;
+          width: 30rem;
+
+          .image-card-details {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+
+        .individual-image {
+          filter: grayscale(0.25);
+          top: 50%;
+          left: 50%;
+          position: absolute;
+          z-index: 0;
+          translate: -50% -50%;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
 
         .image-card-details {
-          opacity: 1;
-          visibility: visible;
-        }
-      }
+          width: 30rem;
+          display: flex;
+          position: absolute;
+          z-index: 1;
+          align-items: center;
+          background: linear-gradient(to bottom, rgb(0 0 0 / 0%), rgb(0 0 0 / 80%));
+          bottom: 0;
+          left: 0;
+          gap: 0.8rem;
+          opacity: 0;
+          padding: 6.25rem 0 1.25rem 1.25rem;
+          transition: 0.25s;
+          visibility: hidden;
 
-      .individual-image {
-        filter: grayscale(0.25);
-        top: 50%;
-        left: 50%;
-        position: absolute;
-        z-index: 0;
-        translate: -50% -50%;
-        // object-fit: cover;
-      }
+          .card-profile img {
+            border-radius: 50%;
+            height: 2.5rem;
+            width: 2.5rem;
+            object-fit: cover;
+          }
 
-      .image-card-details {
-        width: 30rem;
-        display: flex;
-        position: absolute;
-        z-index: 1;
-        align-items: center;
-        background: linear-gradient(to bottom, rgb(0 0 0 / 0%), rgb(0 0 0 / 80%));
-        bottom: 0;
-        left: 0;
-        gap: 0.8rem;
-        opacity: 0;
-        padding: 6.25rem 0 1.25rem 1.25rem;
-        transition: 0.25s;
-        visibility: hidden;
+          .card-profile-info h2, p {
+            margin: 0;
+            font-family: fonts.$primary-font-family;
+          }
 
-        .card-profile img {
-          border-radius: 50%;
-          height: 2.5rem;
-          width: 2.5rem;
-        }
+          .card-profile-info h2 {
+            color: colors.$primary-color;
+            font-size: fonts.$small-font-size;
+            font-weight: 400;
+          }
 
-        .card-profile-info h2, p {
-          margin: 0;
-          font-family: fonts.$primary-font-family;
-        }
-
-        .card-profile-info h2 {
-          color: colors.$primary-color;
-          font-size: fonts.$small-font-size;
-          font-weight: 400;
-        }
-
-        .card-profile-info p {
-          color: rgb(255 255 255 / 65%);
-          font-size: fonts.$xsmall-font-size;
+          .card-profile-info p {
+            color: rgb(255 255 255 / 65%);
+            font-size: fonts.$xsmall-font-size;
+          }
         }
       }
     }
