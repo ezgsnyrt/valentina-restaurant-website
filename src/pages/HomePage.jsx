@@ -8,7 +8,18 @@ import { useState } from 'react';
 
 
 function HomePage(){
-  const [articles,setArticles] = useState([1,2,3])
+  const [articles,setArticles] = useState([
+    {
+      "img_src": ".././assets/service-image-one.jpg"
+    },
+    {
+      "img_src": ".././assets/service-image-two.jpg"
+    },
+    {
+      "img_src": ".././assets/service-image-three.jpg"
+    }
+  ])
+
 
   return (
     <div>
