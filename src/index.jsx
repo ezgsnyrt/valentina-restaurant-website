@@ -1,18 +1,14 @@
-import "bootstrap/dist/css/bootstrap.min.css";
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './App.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider, } from "react-router-dom";
 import AboutPage from './pages/AboutPage';
-import BlogPage from './pages/BlogPage';
 import ContactPage from './pages/ContactPage';
 import HomePage from './pages/HomePage';
 import MenuPage from './pages/MenuPage.jsx';
 import ReservationPage from './pages/ReservationPage.jsx';
 import ServicesPage from './pages/ServicesPage.jsx';
-
 
 const router = createBrowserRouter([
   {
@@ -22,10 +18,6 @@ const router = createBrowserRouter([
   {
     path: "about",
     element: <AboutPage />,
-  },
-  {
-    path: "blog",
-    element: <BlogPage />,
   },
   {
     path: "contact",

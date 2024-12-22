@@ -43,12 +43,11 @@ function HomePage(){
   return (
     <div>
       <HeaderComponent />
-      <AboutComponent />
+      {/* <AboutComponent />
       <ChefComponent />
       <SpecialitiesComponent articles={articles} />
       <ServiceComponent />
-      <ReservationComponent />
-      <div>Home Page</div>
+      <ReservationComponent /> */}
     </div>
   )
 }
