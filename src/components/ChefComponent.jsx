@@ -79,4 +79,3 @@ export default ChefComponent;
 // <a href="https://www.vecteezy.com/free-photos/smiling">Smiling Stock photos by Vecteezy</a>
 // <a href="https://www.vecteezy.com/free-photos/woman-chef">Woman Chef Stock photos by Vecteezy</a>
 //<a href="https://www.vecteezy.com/free-photos/women-chef">Women Chef Stock photos by Vecteezy</a>
-

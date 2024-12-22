@@ -44,7 +44,7 @@ function HomePage(){
     <div>
       <HeaderComponent />
       <AboutComponent />
-      {/* <ChefComponent /> */}
+      <ChefComponent />
       {/* <SpecialitiesComponent articles={articles} />
       <ServiceComponent />
       <ReservationComponent /> */}
