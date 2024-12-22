@@ -11925,10 +11925,10 @@ header .navbar .container .navigation-logo a {
   text-shadow: -3px 0 #ffffff, 0 1px #ffffff, 1px 0 #ffffff, 0 -1px #ffffff;
   text-decoration: none;
 }
-header .navbar .container .navbar-collapse .navigation-menu {
+header .navbar .container #responsive-navbar-nav .navigation-menu {
   margin-right: 0 !important;
 }
-header .navbar .container .navbar-collapse .navigation-menu .nav-link-custom {
+header .navbar .container #responsive-navbar-nav .navigation-menu .nav-link-custom {
   display: inline-block;
   position: relative;
   margin-left: 1rem;
@@ -11940,7 +11940,7 @@ header .navbar .container .navbar-collapse .navigation-menu .nav-link-custom {
   letter-spacing: 0.2rem;
   padding: 0.5rem;
 }
-header .navbar .container .navbar-collapse .navigation-menu .nav-link-custom:after {
+header .navbar .container #responsive-navbar-nav .navigation-menu .nav-link-custom:after {
   position: absolute;
   z-index: 1;
   background: none repeat scroll 0 0 transparent;
@@ -11953,11 +11953,11 @@ header .navbar .container .navbar-collapse .navigation-menu .nav-link-custom:aft
   transition: width 0.4s ease 0s, left 0.4s ease 0s;
   width: 0;
 }
-header .navbar .container .navbar-collapse .navigation-menu .nav-link-custom:hover:after {
+header .navbar .container #responsive-navbar-nav .navigation-menu .nav-link-custom:hover:after {
   width: 100%;
   left: 0;
 }
-header .navbar .container .navbar-collapse .navigation-menu .nav-link-custom:hover {
+header .navbar .container #responsive-navbar-nav .navigation-menu .nav-link-custom:hover {
   text-decoration: none;
 }
 header .carousel-item {
@@ -11992,6 +11992,9 @@ header .carousel-item .carousel-caption p {
   .carousel-caption h5, .carousel-caption .h5 {
     font-size: 2.2rem !important;
   }
+  .carousel-indicators {
+    display: none;
+  }
 }
 @media screen and (max-width: 480px) {
   .carousel-caption h5, .carousel-caption .h5 {
@@ -12011,7 +12014,12 @@ header .carousel-item .carousel-caption p {
   vertical-align: middle;
   text-align: center;
   height: auto;
-  padding-top: 3%;
+  padding: 2% 0;
+}
+@media screen and (max-width: 992px) {
+  .section-title {
+    font-size: 3rem;
+  }
 }
 @media screen and (max-width: 768px) {
   .section-title {
@@ -12033,6 +12041,11 @@ header .carousel-item .carousel-caption p {
   padding-bottom: 2%;
   text-align: start;
 }
+@media screen and (max-width: 992px) {
+  .section-subtitle {
+    font-size: 1.7rem;
+  }
+}
 @media screen and (max-width: 768px) {
   .section-subtitle {
     font-size: 1.1rem;
@@ -12051,32 +12064,37 @@ header .carousel-item .carousel-caption p {
   text-align: justify;
   line-height: 1.9rem;
 }
+@media screen and (max-width: 992px) {
+  .section-explanation {
+    font-size: 1.1rem;
+    line-height: 1.9rem;
+  }
+}
 @media screen and (max-width: 768px) {
   .section-explanation {
     font-size: 0.9rem;
-    line-height: 1rem;
+    line-height: 1.5rem;
   }
 }
 
 #section-about .section-container {
-  height: 80vh;
+  height: auto;
   width: 100%;
-}
-#section-about .section-container .upper-section-container {
-  height: 20%;
+  padding: 0 2rem;
 }
 #section-about .section-container .bottom-section-container {
-  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
 }
 #section-about .section-container .bottom-section-container .inner-container-left {
-  padding-right: 5%;
+  padding-right: 4%;
 }
 #section-about .section-container .bottom-section-container .inner-container-left .section-explanation {
   margin-bottom: 2.5%;
 }
-#section-about .section-container .bottom-section-container .inner-container-right {
-  height: 100%;
-  padding-left: 2%;
+#section-about .section-container .bottom-section-container .inner-container-left h4.section-subtitle, #section-about .section-container .bottom-section-container .inner-container-left .section-subtitle.h4 {
+  margin-bottom: 1rem;
 }
 #section-about .section-container .bottom-section-container .inner-container-right .container-image {
   width: 100%;
@@ -12121,6 +12139,54 @@ header .carousel-item .carousel-caption p {
   background: #5c677d;
 }
 
+@media screen and (max-width: 992px) {
+  #section-about .section-container {
+    width: 100%;
+    margin: auto;
+  }
+  #section-about .section-container .bottom-section-container {
+    flex-direction: column;
+  }
+  #section-about .section-container .bottom-section-container .inner-container-left {
+    padding-right: 0;
+    text-align: center;
+  }
+  #section-about .section-container .bottom-section-container .inner-container-right {
+    padding-right: 0 !important;
+  }
+  #section-about .section-container .bottom-section-container .inner-container-right .container-image {
+    max-height: 32rem;
+    margin-top: 2rem;
+    width: 100%;
+  }
+  .inner-container .button {
+    min-width: 10rem;
+    height: 3rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  #section-about .section-container .bottom-section-container .inner-container-left {
+    padding-right: 0;
+    text-align: center;
+  }
+  #section-about .section-container .bottom-section-container .inner-container-left h4.section-subtitle, #section-about .section-container .bottom-section-container .inner-container-left .section-subtitle.h4 {
+    font-size: 1.1rem;
+  }
+  #section-about .section-container .bottom-section-container .inner-container-left .section-explanation {
+    font-size: 0.9rem;
+  }
+  #section-about .section-container .bottom-section-container .inner-container-right {
+    padding-right: 0 !important;
+  }
+  #section-about .section-container .bottom-section-container .inner-container-right .container-image {
+    max-height: 25rem;
+  }
+  .inner-container button {
+    min-width: 8rem;
+    height: 2.5rem;
+    font-size: 0.9rem;
+  }
+}
 #section-chef {
   height: 100vh;
   background-color: #060C0D;
