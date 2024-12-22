@@ -22,22 +22,6 @@ const ReservationComponent = () => {
     time: ''
   });
 
-  // const handleChange = (e) => {
-  //   let { name, value } = e.target;
-  //   console.log(`name: ${name}, value: ${value}`)
-  //   if (name === 'numberOfPeople') {
-  //     if (value === '')
-  //       value = 0;
-  //     else
-  //       value = Number(value);
-  //   }
-  //   console.log(`type: ${typeof value}`)
-  //   setFormData({
-  //     ...formData,
-  //     [name]: value
-  //   });
-  // };
-
   useEffect(() => {
     console.log(formData)
   }, [formData])
