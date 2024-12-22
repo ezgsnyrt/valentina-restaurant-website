@@ -1,0 +1,67 @@
+.navbar {
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.4%;
+    background-color: colors.$main-background;
+
+    .container {
+        .navigation-logo {
+            font-family: fonts.$logo-font-family;
+            font-weight: fonts.$bold-font-weight;
+            font-size: fonts.$medium-font-size;
+
+            a {
+                color: colors.$secondary-color;
+                text-shadow: -3px 0 #ffffff, 0 1px #ffffff, 1px 0 #ffffff,
+                    0 -1px #ffffff;
+                text-decoration: none;
+            }
+        }
+
+        #responsive-navbar-nav {
+            .navigation-menu {
+                margin-right: 0 !important;
+
+                .nav-link-custom {
+                    display: inline-block;
+                    position: relative;
+                    margin-left: 1rem;
+                    text-decoration: none;
+                    color: colors.$primary-color;
+                    font-weight: fonts.$normal-font-weight;
+                    font-size: fonts.$xsmall-font-size;
+                    text-transform: uppercase;
+                    letter-spacing: fonts.$xsmall-letter-spacing;
+                    padding: 0.5rem;
+
+                    &:after {
+                        position: absolute;
+                        z-index: 1;
+                        background: none repeat scroll 0 0 transparent;
+                        bottom: 0;
+                        content: "";
+                        display: block;
+                        height: 0.1rem;
+                        left: 50%;
+                        background: colors.$primary-color;
+                        transition: width 0.4s ease 0s, left 0.4s ease 0s;
+                        width: 0;
+                    }
+
+                    &:hover:after {
+                        width: 100%;
+                        left: 0;
+                    }
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
