@@ -17,45 +17,36 @@ const ReservationComponent = () => {
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
-    number_of_people: 2,
+    numberOfPeople: 2,
     date: '',
     time: ''
   });
 
-  const [formErrors, setFormErrors] = useState({
-    name: '',
-    phone: '',
-    number_of_people: '',
-    date: '',
-    time: ''
-  });
+  // const handleChange = (e) => {
+  //   let { name, value } = e.target;
+  //   console.log(`name: ${name}, value: ${value}`)
+  //   if (name === 'numberOfPeople') {
+  //     if (value === '')
+  //       value = 0;
+  //     else
+  //       value = Number(value);
+  //   }
+  //   console.log(`type: ${typeof value}`)
+  //   setFormData({
+  //     ...formData,
+  //     [name]: value
+  //   });
+  // };
 
-  const handleChange = (e) => {
-    let { name, value } = e.target;
-    console.log(`name: ${name}, value: ${value}`)
-    if (name === 'numberOfPeople') {
-      if (value === '')
-        value = 0;
-      else
-        value = Number(value);
-    }
-    console.log(`type: ${typeof value}`)
-    setFormData({
-      ...formData,
-      [name]: value
-    });
-  };
+  useEffect(() => {
+    console.log(formData)
+  }, [formData])
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // if (validateForm()) {
-    //   console.log('Reservation Data:', formData);
-    //   // Form submission logic here
-    //   // axios.post
-    // } else {
-    //   console.log('Form validation failed');
-    // }
-  };
+  const handleSubmit = (values) => {
+    console.log("event here")
+    setFormData(values);
+    console.log("values: ", values)
+  }
 
   return (
     <section id="section-reservation">
@@ -67,10 +58,7 @@ const ReservationComponent = () => {
         <Formik
           initialValues={formData}
           validationSchema={reservationSchema}
-          onChange={handleChange}
-          onSubmit={values => {
-            console.log("values: ", values)
-          }}
+          onSubmit={handleSubmit}
         >
           {({ handleChange, handleSubmit, values, errors }) => (
             <Form onSubmit={handleSubmit}>
