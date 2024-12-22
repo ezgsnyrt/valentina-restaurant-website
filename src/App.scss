@@ -1,499 +1,537 @@
-@use '../public/styles/fonts';
-@use '../public/styles/colors';
-@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Italianno&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-@import '../node_modules/bootstrap/scss/bootstrap.scss';
-@import '../node_modules/normalize-scss/sass/normalize';
+@use "../public/styles/fonts";
+@use "../public/styles/colors";
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Italianno&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../node_modules/normalize-scss/sass/normalize";
 //other components scss
 
 // Default Styles
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    height: 40vmin;
+    pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: #61dafb;
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 //General Styles
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: fonts.$primary-font-family;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: fonts.$primary-font-family;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 #section-header,
 #section-about,
 #section-specialities,
 #section-service,
-#section-reservation  {
-  width: 100%;
-  height: 100vh;
+#section-reservation {
+    width: 100%;
+    height: 100vh;
 }
 
 //Header and Navbar Styles
 header {
-  position: relative;
+    position: relative;
 
-  nav {
-    width: 100%;
-    position: absolute;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1.4%;
-    background-color: colors.$main-background;
-    // background-color: rgba(255, 255, 255, 0.074);
-    // backdrop-filter: blur(20px);
+    .navbar {
+        width: 100%;
+        position: absolute;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.4%;
+        background-color: colors.$main-background;
 
-    .navigation-logo {
-      font-family: fonts.$logo-font-family;
-      font-weight: fonts.$bold-font-weight;
-      font-size: fonts.$large-font-size;
+        .container {
+            .navigation-logo {
+                font-family: fonts.$logo-font-family;
+                font-weight: fonts.$bold-font-weight;
+                font-size: fonts.$medium-font-size;
 
-      a {
-        color: colors.$secondary-color;
-        text-shadow: -3px 0 #FFFFFF, 0 1px #FFFFFF, 1px 0 #FFFFFF, 0 -1px #FFFFFF;
-        text-decoration: none;
-      }
-    }
+                a {
+                    color: colors.$secondary-color;
+                    text-shadow: -3px 0 #ffffff, 0 1px #ffffff, 1px 0 #ffffff,
+                        0 -1px #ffffff;
+                    text-decoration: none;
+                }
+            }
 
-    .navigation-menu .navigation-links {
-      list-style: none;
-      margin-bottom: 0;
+            .navbar-collapse {
+                .navigation-menu {
+                    margin-right: 0 !important;
 
-      li {
-        display: inline-block;
+                    .nav-link-custom {
+                        display: inline-block;
+                        position: relative;
+                        margin-left: 1rem;
+                        text-decoration: none;
+                        color: colors.$primary-color;
+                        font-weight: fonts.$normal-font-weight;
+                        font-size: fonts.$xsmall-font-size;
+                        text-transform: uppercase;
+                        letter-spacing: fonts.$xsmall-letter-spacing;
+                        padding: 0.5rem;
 
-        a {
-          position: relative;
-          margin-left: 1.6rem;
-          text-decoration: none;
-          color: colors.$primary-color;
-          font-weight: fonts.$normal-font-weight;
-          font-size: fonts.$small-font-size;
-          text-transform: uppercase;
-          letter-spacing: fonts.$xsmall-letter-spacing;
-          padding: 0.5rem;
+                        &:after {
+                            position: absolute;
+                            z-index: 1;
+                            background: none repeat scroll 0 0 transparent;
+                            bottom: 0;
+                            content: "";
+                            display: block;
+                            height: 0.1rem;
+                            left: 50%;
+                            background: colors.$primary-color;
+                            transition: width 0.4s ease 0s, left 0.4s ease 0s;
+                            width: 0;
+                        }
 
-          &:after {
-            position: absolute;
-            z-index: 1;
-            background: none repeat scroll 0 0 transparent;
-            bottom: 0;
-            content: "";
-            display: block;
-            height: 0.1rem;
-            left: 50%;
-            background: colors.$primary-color;
-            transition: width 0.4s ease 0s, left 0.4s ease 0s;
-            width: 0;
-          }
+                        &:hover:after {
+                            width: 100%;
+                            left: 0;
+                        }
 
-          &:hover:after {
-            width: 100%;
-            left: 0;
-          }
+                        &:hover {
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
         }
-      }
     }
-  }
+    .carousel-item {
+        height: 100vh;
+        width: 100%;
 
-  .carousel-item {
-    height: 100vh;
-    width: 100%;
+        img {
+            height: 100vh;
+            object-fit: cover;
+            object-position: center;
+            overflow: hidden;
+        }
 
-    img {
-      height: 100vh;
-      object-fit: cover;
-      object-position: center;
-      overflow: hidden;
+        .carousel-caption h5,
+        .carousel-caption p {
+            color: colors.$primary-color;
+            font-family: fonts.$text-font-family;
+        }
+
+        .carousel-caption h5 {
+            font-size: fonts.$xlarge-font-size;
+            font-weight: fonts.$semi-bold-font-weight;
+            letter-spacing: 0.1rem;
+            letter-spacing: fonts.$xsmall-letter-spacing;
+        }
+
+        .carousel-caption p {
+            font-size: fonts.$small-font-size;
+            font-weight: fonts.$normal-font-weight;
+            letter-spacing: fonts.$small-letter-spacing;
+            font-style: italic;
+        }
     }
+}
 
-    .carousel-caption h5, .carousel-caption p {
-      color: colors.$primary-color;
-      font-family: fonts.$text-font-family;
-    }
-
+@media screen and (max-width: 768px) {
     .carousel-caption h5 {
-      font-size: fonts.$xlarge-font-size;
-      font-weight: fonts.$semi-bold-font-weight;
-      letter-spacing: 0.1rem;
-      letter-spacing: fonts.$xsmall-letter-spacing;
+        font-size: fonts.$large-font-size !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .carousel-caption h5 {
+        font-size: fonts.$large-font-size !important;
     }
 
     .carousel-caption p {
-      font-size: fonts.$small-font-size;
-      font-weight: fonts.$normal-font-weight;
-      letter-spacing: fonts.$small-letter-spacing;
-      font-style:italic;
+        font-size: fonts.$small-font-size;
+        padding-top: 1rem;
     }
-  }
 }
 
+// Other Section Styles
 .section-title {
-  font-size: fonts.$xxlarge-font-size;
-  font-family: fonts.$subtitle-font-family;
-  letter-spacing: fonts.$small-letter-spacing;
-  color: colors.$tertiary-color;
-  display: inline-block;
-  vertical-align: middle;
-  text-align: center;
-  height: 20vh;
-  padding-top: 3%;
+    font-size: fonts.$xxlarge-font-size;
+    font-family: fonts.$subtitle-font-family;
+    letter-spacing: fonts.$small-letter-spacing;
+    color: colors.$tertiary-color;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    height: auto;
+    padding-top: 3%;
+
+    @media screen and (max-width: 768px) {
+        font-size: fonts.$large-font-size;
+        padding-top: 5%;
+    }
+
+    @media screen and (max-width: 480px) {
+        font-size: fonts.$medium-font-size;
+    }
 }
 
 .section-subtitle {
-  font-size: fonts.$medium-font-size;
-  font-family: fonts.$primary-font-family;
-  font-weight: fonts.$normal-font-weight;
-  letter-spacing: fonts.$xsmall-letter-spacing;
-  padding-bottom: 2%;
-  text-align: start;
+    font-size: fonts.$medium-font-size;
+    font-family: fonts.$primary-font-family;
+    font-weight: fonts.$normal-font-weight;
+    letter-spacing: fonts.$xsmall-letter-spacing;
+    padding-bottom: 2%;
+    text-align: start;
+
+    @media screen and (max-width: 768px) {
+        font-size: fonts.$small-font-size;
+    }
+
+    @media screen and (max-width: 480px) {
+        font-size: fonts.$xsmall-font-size;
+    }
 }
 
 .section-explanation {
-  font-size: fonts.$small-font-size;
-  font-family: fonts.$text-font-family;
-  font-weight: fonts.$text-font-weight;
-  text-align: justify;
-  line-height: fonts.$small-line-height;
+    font-size: fonts.$small-font-size;
+    font-family: fonts.$text-font-family;
+    font-weight: fonts.$text-font-weight;
+    text-align: justify;
+    line-height: fonts.$small-line-height;
+
+    @media screen and (max-width: 768px) {
+        font-size: fonts.$xsmall-font-size;
+        line-height: 1rem;
+    }
 }
 
 //About Section Styles
 
 #section-about {
+    .section-container {
+        height: 80vh;
+        width: 100%;
 
-  .section-container {
-    height: 80vh;
-    width: 100%;
-
-    .upper-section-container {
-      height: 20%;
-    }
-
-    .bottom-section-container {
-      height: 100%;
-
-      .inner-container-left {
-        padding-right: 5%;
-
-        .section-explanation {
-          margin-bottom: 2.5%;
+        .upper-section-container {
+            height: 20%;
         }
-      }
 
-      .inner-container-right {
-        height: 100%;
-        padding-left: 2%;
+        .bottom-section-container {
+            height: 100%;
 
-        .container-image {
-          width: 100%;
-          height: 90%;
+            .inner-container-left {
+                padding-right: 5%;
+
+                .section-explanation {
+                    margin-bottom: 2.5%;
+                }
+            }
+
+            .inner-container-right {
+                height: 100%;
+                padding-left: 2%;
+
+                .container-image {
+                    width: 100%;
+                    height: 90%;
+                }
+            }
         }
-      }
-    }
-  }
-
-  button {
-    min-width: 12rem;
-    height: 3.5rem;
-    padding: 0.5rem 1rem;
-    margin-top: 4%;
-    font-family: fonts.$primary-font-family;
-    font-weight: fonts.$text-font-weight;
-    letter-spacing: fonts.$xsmall-letter-spacing;
-    font-size: fonts.$xsmall-font-size;
-    cursor: pointer;
-    transition: all 0.4s ease;
-    position: relative;
-    display: inline-block;
-    outline: none;
-    border-radius: 0;
-    z-index: 0;
-    background: colors.$button-color;
-    overflow: hidden;
-    border: 2px solid #012a4a;
-    color: colors.$primary-color;
-
-    &:hover {
-      color: colors.$primary-color;
-
-      &:after {
-        height: 100%;
-      }
     }
 
-    &:after {
-      content: "";
-      width: 100%;
-      height: 0;
-      position: absolute;
-      z-index: -1;
-      transition: all 0.3s ease;
-      left: 0;
-      bottom: 0;
-      background: colors.$button-hover-color;
+    button {
+        min-width: 12rem;
+        height: 3.5rem;
+        padding: 0.5rem 1rem;
+        margin-top: 4%;
+        font-family: fonts.$primary-font-family;
+        font-weight: fonts.$text-font-weight;
+        letter-spacing: fonts.$xsmall-letter-spacing;
+        font-size: fonts.$xsmall-font-size;
+        cursor: pointer;
+        transition: all 0.4s ease;
+        position: relative;
+        display: inline-block;
+        outline: none;
+        border-radius: 0;
+        z-index: 0;
+        background: colors.$button-color;
+        overflow: hidden;
+        border: 2px solid colors.$button-color;
+        color: colors.$primary-color;
+
+        &:hover {
+            color: colors.$primary-color;
+
+            &:after {
+                height: 100%;
+            }
+        }
+
+        &:after {
+            content: "";
+            width: 100%;
+            height: 0;
+            position: absolute;
+            z-index: -1;
+            transition: all 0.3s ease;
+            left: 0;
+            bottom: 0;
+            background: colors.$button-hover-color;
+        }
     }
-  }
 }
 
 // Chef Section Styles
 #section-chef {
-  height: 100vh;
-  background-color: colors.$main-background;
-  color: colors.$primary-color;
+    height: 100vh;
+    background-color: colors.$main-background;
+    color: colors.$primary-color;
 
-  .general-card-container {
-    width: 100%;
-    height: 70%;
-    display: flex;
-    justify-content: center;
-    align-items:flex-start;
+    .general-card-container {
+        width: 100%;
+        height: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
 
-    .card-group {
-      gap: 1.5rem;
-      width: 80%;
-      height: 40%;
-      margin-top: 4%;
+        .card-group {
+            gap: 1.5rem;
+            width: 80%;
+            height: 40%;
+            margin-top: 4%;
 
-      .card {
-        border-radius: 0%;
-        background: linear-gradient(0deg, #C3AA83, #272727);
-        border: none;
-        border-radius: 20px;
-        padding: 5px;
-        cursor: default;
+            .card {
+                border-radius: 0%;
+                background: linear-gradient(0deg, #c3aa83, #272727);
+                border: none;
+                border-radius: 20px;
+                padding: 5px;
+                cursor: default;
 
-        .card-img-top {
-          width: 100%;
-          min-height: 18rem;
-          max-height: 80%;
-          object-fit: cover;
-          border: 2px outset black;
-          border-radius: 1rem;
-        }
+                .card-img-top {
+                    width: 100%;
+                    min-height: 18rem;
+                    max-height: 80%;
+                    object-fit: cover;
+                    border: 2px outset colors.$secondary-color;
+                    border-radius: 1rem;
+                }
 
-        .card-title {
-          font-family: fonts.$primary-font-family;
-          font-size: fonts.$small-font-size;
-          font-weight: fonts.$semi-bold-font-weight;
-        }
+                .card-title {
+                    font-family: fonts.$primary-font-family;
+                    font-size: fonts.$small-font-size;
+                    font-weight: fonts.$semi-bold-font-weight;
+                }
 
-        .card-text {
-          font-family: fonts.$text-font-family;
-          font-size: fonts.$xsmall-font-size;
+                .card-text {
+                    font-family: fonts.$text-font-family;
+                    font-size: fonts.$xsmall-font-size;
 
-          .svg-inline--fa {
-            padding-right: 5%;
-            cursor:pointer;
+                    .svg-inline--fa {
+                        padding-right: 5%;
+                        cursor: pointer;
 
-            &:hover {
-              color: colors.$social-hover-color;
+                        &:hover {
+                            color: colors.$social-hover-color;
+                        }
+                    }
+                }
             }
-          }
         }
-      }
     }
-  }
 }
 
 // Specialities Section Styles
 #section-specialities {
-  background-image: url('../public/assets/background1.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
+    background-image: url("../public/assets/background1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
 
-  .bottom-row {
-    width: 100%;
-    min-height: 75vh;
-    display: grid;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    place-items: center;
-    letter-spacing: fonts.$xxsmall-letter-spacing;
+    .bottom-row {
+        width: 100%;
+        min-height: 75vh;
+        display: grid;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        place-items: center;
+        letter-spacing: fonts.$xxsmall-letter-spacing;
 
-    .bottom-col {
-      display: flex;
-      gap: 0.5rem;
-      padding: 1rem 0;
+        .bottom-col {
+            display: flex;
+            gap: 0.5rem;
+            padding: 1rem 0;
 
-      .image-card {
-        position: relative;
-        height: 40rem;
-        width: 7rem;
-        display: flex;
-        align-items: flex-end;
-        background: #fff;
-        border-radius: 2.25rem;
-        overflow: hidden;
-        opacity: 0.85;
-        transition: 0.4s;
-        cursor: pointer;
+            .image-card {
+                position: relative;
+                height: 40rem;
+                width: 7rem;
+                display: flex;
+                align-items: flex-end;
+                background: #fff;
+                border-radius: 2.25rem;
+                overflow: hidden;
+                opacity: 0.85;
+                transition: 0.4s;
+                cursor: pointer;
 
-        &.active {
-          opacity: 1;
-          width: 30rem;
+                &.active {
+                    opacity: 1;
+                    width: 30rem;
 
-          .image-card-details {
-            opacity: 1;
-            visibility: visible;
-          }
+                    .image-card-details {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+
+                .individual-image {
+                    filter: grayscale(0.25);
+                    top: 50%;
+                    left: 50%;
+                    position: absolute;
+                    z-index: 0;
+                    translate: -50% -50%;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+                .image-card-details {
+                    width: 30rem;
+                    display: flex;
+                    position: absolute;
+                    z-index: 1;
+                    align-items: center;
+                    background: linear-gradient(
+                        to bottom,
+                        rgb(0 0 0 / 0%),
+                        rgb(0 0 0 / 80%)
+                    );
+                    bottom: 0;
+                    left: 0;
+                    gap: 0.8rem;
+                    opacity: 0;
+                    padding: 6.25rem 0 1.25rem 1.25rem;
+                    transition: 0.25s;
+                    visibility: hidden;
+
+                    .card-profile img {
+                        border-radius: 50%;
+                        height: 2.5rem;
+                        width: 2.5rem;
+                        object-fit: cover;
+                    }
+
+                    .card-profile-info h2,
+                    p {
+                        margin: 0;
+                        font-family: fonts.$primary-font-family;
+                    }
+
+                    .card-profile-info h2 {
+                        color: colors.$primary-color;
+                        font-size: fonts.$small-font-size;
+                        font-weight: 400;
+                    }
+
+                    .card-profile-info p {
+                        color: rgb(255 255 255 / 65%);
+                        font-size: fonts.$xsmall-font-size;
+                    }
+                }
+            }
         }
-
-        .individual-image {
-          filter: grayscale(0.25);
-          top: 50%;
-          left: 50%;
-          position: absolute;
-          z-index: 0;
-          translate: -50% -50%;
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
-
-        .image-card-details {
-          width: 30rem;
-          display: flex;
-          position: absolute;
-          z-index: 1;
-          align-items: center;
-          background: linear-gradient(to bottom, rgb(0 0 0 / 0%), rgb(0 0 0 / 80%));
-          bottom: 0;
-          left: 0;
-          gap: 0.8rem;
-          opacity: 0;
-          padding: 6.25rem 0 1.25rem 1.25rem;
-          transition: 0.25s;
-          visibility: hidden;
-
-          .card-profile img {
-            border-radius: 50%;
-            height: 2.5rem;
-            width: 2.5rem;
-            object-fit: cover;
-          }
-
-          .card-profile-info h2, p {
-            margin: 0;
-            font-family: fonts.$primary-font-family;
-          }
-
-          .card-profile-info h2 {
-            color: colors.$primary-color;
-            font-size: fonts.$small-font-size;
-            font-weight: 400;
-          }
-
-          .card-profile-info p {
-            color: rgb(255 255 255 / 65%);
-            font-size: fonts.$xsmall-font-size;
-          }
-        }
-      }
     }
-  }
 }
-
-
 
 // Services Section Styles
 #section-service {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: colors.$main-background;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: colors.$main-background;
 
-  .inner-section-container {
-    width: 75%;
+    .inner-section-container {
+        width: 75%;
 
-    .card-set {
-      gap: 1rem;
-      height: 100%;
+        .card-set {
+            gap: 1rem;
+            height: 100%;
 
-      .individual-card {
-        border: 2px solid #C3AA83;
-        border-radius: 0%;
+            .individual-card {
+                border: 2px solid #c3aa83;
+                border-radius: 0%;
 
-        .card-img-top {
-          max-height: 45%;
-          min-height: 20rem;
-          object-fit: cover;
+                .card-img-top {
+                    max-height: 45%;
+                    min-height: 20rem;
+                    object-fit: cover;
+                }
+
+                .card-body {
+                    background-color: colors.$main-background;
+
+                    .card-title {
+                        font-family: fonts.$primary-font-family;
+                        font-size: fonts.$small-font-size;
+                        font-weight: fonts.$semi-bold-font-weight;
+                        color: colors.$primary-color;
+                    }
+
+                    p {
+                        font-family: fonts.$text-font-family;
+                        font-size: fonts.$xsmall-font-size;
+                        text-align: justify;
+                        color: colors.$primary-color;
+                    }
+                }
+            }
         }
-
-        .card-body {
-          background-color: colors.$main-background;
-
-          .card-title {
-            font-family: fonts.$primary-font-family;
-            font-size: fonts.$small-font-size;
-            font-weight: fonts.$semi-bold-font-weight;
-            color: colors.$primary-color;
-          }
-
-          p {
-            font-family: fonts.$text-font-family;
-            font-size: fonts.$xsmall-font-size;
-            text-align: justify;
-            color: colors.$primary-color;
-          }
-        }
-      }
     }
-  }
 }
 
 //Reservation Section Styles
 #section-reservation {
-  background-color: colors.$primary-color;
+    background-color: colors.$primary-color;
 }
-
-
-
-
-
-
-
 
 // .booking-form {
 //   display: flex;
