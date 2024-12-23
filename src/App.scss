@@ -9,6 +9,7 @@
 @import "./sass/ChefComponent.scss";
 @import "./sass/SpecialitiesComponent.scss";
 @import "./sass/ServiceComponent.scss";
+@import "./sass/ReservationComponent.scss";
 //other components scss
 
 // Default Styles
@@ -64,8 +65,7 @@ html {
 }
 
 #section-header,
-#section-about,
-#section-reservation {
+#section-about {
     width: 100%;
     height: 100vh;
 }

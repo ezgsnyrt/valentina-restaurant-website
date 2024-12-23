@@ -38,7 +38,7 @@ const ReservationComponent = () => {
         <h2 className="section-title">Reservations</h2>
       </div>
       <Container>
-        <h2>Reservation</h2>
+        <h2>Book a Table</h2>
         <Formik
           initialValues={formData}
           validationSchema={reservationSchema}
@@ -50,7 +50,7 @@ const ReservationComponent = () => {
                 <Form.Label>Name and Surname</Form.Label>
                 <Form.Control
                   type="text"
-                  placeholder="Enter your name and surname"
+                  placeholder="Enter your full name"
                   name="name"
                   value={values.name}
                   onChange={handleChange}
