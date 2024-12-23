@@ -8,6 +8,7 @@
 @import "./sass/AboutComponent.scss";
 @import "./sass/ChefComponent.scss";
 @import "./sass/SpecialitiesComponent.scss";
+@import "./sass/ServiceComponent.scss";
 //other components scss
 
 // Default Styles
@@ -64,7 +65,6 @@ html {
 
 #section-header,
 #section-about,
-#section-specialities,
 #section-service,
 #section-reservation {
     width: 100%;
@@ -137,52 +137,6 @@ html {
     }
 }
 
-
-// Services Section Styles
-#section-service {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: colors.$main-background;
-
-    .inner-section-container {
-        width: 75%;
-
-        .card-set {
-            gap: 1rem;
-            height: 100%;
-
-            .individual-card {
-                border: 2px solid #c3aa83;
-                border-radius: 0%;
-
-                .card-img-top {
-                    max-height: 45%;
-                    min-height: 20rem;
-                    object-fit: cover;
-                }
-
-                .card-body {
-                    background-color: colors.$main-background;
-
-                    .card-title {
-                        font-family: fonts.$primary-font-family;
-                        font-size: fonts.$small-font-size;
-                        font-weight: fonts.$semi-bold-font-weight;
-                        color: colors.$primary-color;
-                    }
-
-                    p {
-                        font-family: fonts.$text-font-family;
-                        font-size: fonts.$xsmall-font-size;
-                        text-align: justify;
-                        color: colors.$primary-color;
-                    }
-                }
-            }
-        }
-    }
-}
 
 //Reservation Section Styles
 #section-reservation {

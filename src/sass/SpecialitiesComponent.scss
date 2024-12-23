@@ -123,64 +123,80 @@
 }
 
 @media (min-width: 1200px) and (max-width: 1400px) {
-    .bottom-col {
-        gap: 0.5rem;
+    #section-specialities {
+        height: auto;
 
-        .image-card {
-            height: 32rem;
-            width: 6rem;
+        .bottom-row .bottom-col {
+            gap: 0.5rem;
 
-            &.active {
-                width: 28rem;
+            .image-card {
+                height: 32rem;
+                width: 6rem;
+
+                &.active {
+                    width: 28rem;
+                }
             }
         }
     }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-    .bottom-col {
-        gap: 0.4rem;
+    #section-specialities {
+        height: auto;
 
-        .image-card {
-            height: 32rem;
-            width: 5rem;
+        .bottom-row .bottom-col {
+            gap: 0.4rem;
 
-            &.active {
-                width: 24rem;
+            .image-card {
+                height: 32rem;
+                width: 5rem;
+
+                &.active {
+                    width: 24rem;
+                }
             }
         }
     }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-    .bottom-col {
-        gap: 0.2rem;
+    #section-specialities {
+        height: auto;
 
-        .image-card {
-            height: 32rem;
-            width: 4rem;
+        .bottom-row .bottom-col {
+            gap: 0.2rem;
 
-            &.active {
-                width: 18rem;
+            .image-card {
+                height: 32rem;
+                width: 4rem;
+
+                &.active {
+                    width: 18rem;
+                }
             }
         }
     }
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
-    .bottom-row {
-        width: 100%;
-        min-height: 60vh;
+    #section-specialities {
+        height: auto;
 
-        .bottom-col {
-            gap: 0.2rem;
+        .bottom-row {
+            width: 100%;
+            min-height: 60vh;
 
-            .image-card {
-                height: 25rem;
-                width: 3rem;
+            .bottom-col {
+                gap: 0.2rem;
 
-                &.active {
-                    width: 13rem;
+                .image-card {
+                    height: 25rem;
+                    width: 3rem;
+
+                    &.active {
+                        width: 13rem;
+                    }
                 }
             }
         }
@@ -191,20 +207,19 @@
     #section-specialities {
         height: auto;
 
-        .bottom-row {
-            .bottom-col {
-                display: grid !important;
-                grid-template-columns: repeat(1, 1fr);
-                gap: 1rem;
-                width: 100%;
+        .bottom-row .bottom-col {
+            display: grid !important;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 1rem;
+            width: 100%;
 
-                .image-card {
-                    height: 32rem;
-                    min-width: 18rem;
-                    width: 100%;
-                    opacity: 1;
-                }
+            .image-card {
+                height: 32rem;
+                min-width: 18rem;
+                width: 100%;
+                opacity: 1;
             }
+
         }
     }
 }
