@@ -6,7 +6,8 @@
     align-items: center;
     justify-content: space-between;
     padding: 1.4%;
-    background-color: colors.$main-background;
+    background-color: colors.$secondary-color !important;
+
 
     .container {
         .navigation-logo {

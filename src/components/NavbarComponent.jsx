@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 function NavbarComponent() {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" data-bs-theme="dark" className="bg-body-tertiary" sticky="top">
+    <Navbar collapseOnSelect expand="lg" data-bs-theme="dark" className="bg-body-tertiary" sticky="top">
       <Container>
         <Navbar.Brand href="#home" className="navigation-logo">
           <FontAwesomeIcon icon={faV} size={"lg"} color={"white"} className="me-2" />
