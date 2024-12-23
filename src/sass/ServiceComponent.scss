@@ -1,0 +1,89 @@
+#section-service {
+    display: flex;
+    background-color: colors.$main-background;
+
+    .inner-section-container .card-set {
+        margin: 2rem 0;
+
+        .individual-card {
+            border: 2px solid #c3aa83;
+            border-radius: 0%;
+
+            .card-img-top {
+                max-height: 45%;
+                min-height: 20rem;
+                object-fit: cover;
+            }
+
+            .card-body {
+                background-color: colors.$main-background;
+
+                .card-title {
+                    font-family: fonts.$primary-font-family;
+                    font-size: fonts.$small-font-size;
+                    font-weight: fonts.$semi-bold-font-weight;
+                    color: colors.$primary-color;
+                }
+
+                p {
+                    font-family: fonts.$text-font-family;
+                    font-size: fonts.$xsmall-font-size;
+                    text-align: justify;
+                    color: colors.$primary-color;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    #section-service {
+        height: auto;
+        justify-content: center;
+        align-items: center;
+
+        .inner-section-container {
+            width: 75%;
+
+            .card-set {
+                height: 100%;
+                gap: 1rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    #section-service {
+        height: auto;
+
+        .inner-section-container {
+            width: 100%;
+            padding: 0 2rem;
+
+            .card-set {
+                height: auto;
+                gap: 0.5rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    #section-service {
+        height: auto;
+
+        .inner-section-container {
+            height: auto;
+            width: 100%;
+            padding: 0 2rem;
+
+            .card-set {
+                height: auto;
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                gap: 1rem;
+            }
+        }
+    }
+}

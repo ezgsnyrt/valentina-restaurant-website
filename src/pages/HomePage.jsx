@@ -40,8 +40,8 @@ function HomePage(){
       <AboutComponent />
       <ChefComponent />
       <SpecialitiesComponent articles={articles} />
-      {/* <ServiceComponent />
-      <ReservationComponent /> */}
+      <ServiceComponent />
+      {/* <ReservationComponent /> */}
     </>
   )
 }
