@@ -5,6 +5,7 @@ import ServiceComponent from '../components/ServiceComponent';
 import ChefComponent from '../components/ChefComponent';
 import SpecialitiesComponent from '../components/SpecialitiesComponent';
 import ReservationComponent from '../components/ReservationComponent';
+import ContactComponent from '../components/ContactComponent';
 import { useState } from 'react';
 
 
@@ -41,7 +42,8 @@ function HomePage(){
       <ChefComponent />
       <SpecialitiesComponent articles={articles} />
       <ServiceComponent />
-      {/* <ReservationComponent /> */}
+      <ReservationComponent />
+      <ContactComponent />
     </>
   )
 }

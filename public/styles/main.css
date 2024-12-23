@@ -12487,6 +12487,84 @@ header .carousel-item .carousel-caption p {
     max-width: 50rem;
   }
 }
+#section-contact {
+  padding: 3rem 1rem;
+  background-color: #000000;
+}
+#section-contact .contact-card {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 0.7rem;
+  overflow: hidden;
+}
+#section-contact .contact-card .row {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(54, 51, 51) 68%);
+}
+#section-contact .contact-card .row .contact-image-container {
+  padding: 0;
+}
+#section-contact .contact-card .row .contact-image-container .contact-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#section-contact .contact-card .row .contact-text-container {
+  padding: 2rem;
+}
+#section-contact .contact-card .row .contact-text-container .contact-title,
+#section-contact .contact-card .row .contact-text-container .contact-description,
+#section-contact .contact-card .row .contact-text-container .contact-details {
+  color: #FFFFFF;
+  font-family: "Alegreya Sans SC", sans-serif;
+}
+#section-contact .contact-card .row .contact-text-container .contact-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+#section-contact .contact-card .row .contact-text-container .contact-description {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+#section-contact .contact-card .row .contact-text-container .contact-details {
+  font-size: 1.1rem;
+}
+#section-contact .contact-card .row .contact-text-container .contact-details strong {
+  color: #FFFFFF;
+}
+@media (max-width: 992px) {
+  #section-contact .contact-card .contact-text-container {
+    padding: 1.5rem;
+    text-align: center;
+  }
+  #section-contact .contact-card .contact-text-container .contact-title {
+    font-size: 1.7rem;
+  }
+  #section-contact .contact-card .contact-text-container .contact-description,
+  #section-contact .contact-card .contact-text-container .contact-details {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 576px) {
+  #section-contact .contact-card {
+    flex-direction: column;
+  }
+  #section-contact .contact-card .contact-image-container {
+    margin-bottom: 1rem;
+  }
+  #section-contact .contact-card .contact-text-container {
+    padding: 1rem;
+  }
+  #section-contact .contact-card .contact-text-container .contact-title {
+    font-size: 1.7rem;
+  }
+  #section-contact .contact-card .contact-text-container .contact-description,
+  #section-contact .contact-card .contact-text-container .contact-details {
+    font-size: 0.9rem;
+  }
+}
+
 .App {
   text-align: center;
 }
@@ -12611,10 +12689,6 @@ html {
     font-size: 0.9rem;
     line-height: 1.5rem;
   }
-}
-
-#section-reservation {
-  background-color: #FFFFFF;
 }
 
 /*# sourceMappingURL=main.css.map */
