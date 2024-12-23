@@ -4,6 +4,9 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 const ContactComponent = () => {
     return (
         <section id="section-contact">
+            <div className="inner-section-container">
+                <h2 className="section-title">Contact Us</h2>
+            </div>
             <Container>
                 <Card className="contact-card">
                     <Row className="align-items-center">
@@ -28,7 +31,7 @@ const ContactComponent = () => {
                                 <strong>Email:</strong> contact@restaurant.com
                                 <br />
                                 <strong>Address:</strong> 123 Flavor Avenue,
-                                 Gothenburg, Sweden
+                                Gothenburg, Sweden
                             </p>
                         </Col>
                     </Row>

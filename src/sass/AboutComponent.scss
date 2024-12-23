@@ -1,5 +1,6 @@
 #section-about {
-    height: auto !important;
+    width: 100%;
+
     .section-container {
         height: auto;
         width: 100%;
@@ -74,7 +75,7 @@
 
 @media (min-width: 992px) and (max-width: 1200px) {
     #section-about {
-        height: auto !important;
+        height: auto;
         .section-container {
             width: 100%;
             margin-bottom: 3rem;
@@ -84,7 +85,7 @@
 
 @media (min-width: 576px) and (max-width: 992px) {
     #section-about {
-        height: auto !important;
+        height: auto;
         .section-container {
             width: 100%;
             margin-bottom: 3rem;
@@ -118,7 +119,7 @@
 
 @media screen and (max-width: 575px) {
     #section-about {
-        height: auto !important;
+        height: auto;
 
         .section-container {
             width: 100%;
@@ -155,5 +156,11 @@
         min-width: 8rem;
         height: 2.5rem;
         font-size: fonts.$xsmall-font-size;
+    }
+}
+
+@media (min-width: 1201px) {
+    #section-about {
+        height: 100vh;
     }
 }
