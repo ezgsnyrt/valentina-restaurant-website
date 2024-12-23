@@ -1,55 +1,66 @@
-import React from 'react';
+import React from "react";
 import HeaderComponent from "../components/HeaderComponent";
 import AboutComponent from "../components/AboutComponent";
-import ServiceComponent from '../components/ServiceComponent';
-import ChefComponent from '../components/ChefComponent';
-import SpecialitiesComponent from '../components/SpecialitiesComponent';
-import ReservationComponent from '../components/ReservationComponent';
-import ContactComponent from '../components/ContactComponent';
-import { useState } from 'react';
+import ServiceComponent from "../components/ServiceComponent";
+import ChefComponent from "../components/ChefComponent";
+import SpecialitiesComponent from "../components/SpecialitiesComponent";
+import ReservationComponent from "../components/ReservationComponent";
+import ContactComponent from "../components/ContactComponent";
+import { useState } from "react";
 
+function HomePage() {
+    const [articles, setArticles] = useState([
+        {
+            img_src: ".././assets/specialities-image-one.jpg",
+        },
+        {
+            img_src: ".././assets/specialities-image-two.jpg",
+        },
+        {
+            img_src: ".././assets/specialities-image-three.jpg",
+        },
+        {
+            img_src: ".././assets/specialities-image-four.jpg",
+        },
+        {
+            img_src: ".././assets/specialities-image-six.jpg",
+        },
+        {
+            img_src: ".././assets/specialities-image-seven.jpg",
+        },
+        {
+            img_src: ".././assets/specialities-image-eight.jpg",
+        },
+    ]);
 
-function HomePage(){
-  const [articles,setArticles] = useState([
-    {
-      "img_src": ".././assets/specialities-image-one.jpg"
-    },
-    {
-      "img_src": ".././assets/specialities-image-two.jpg"
-    },
-    {
-      "img_src": ".././assets/specialities-image-three.jpg"
-    },
-    {
-      "img_src": ".././assets/specialities-image-four.jpg"
-    },
-    {
-      "img_src": ".././assets/specialities-image-six.jpg"
-    },
-    {
-      "img_src": ".././assets/specialities-image-seven.jpg"
-    },
-    {
-      "img_src": ".././assets/specialities-image-eight.jpg"
-    }
-  ])
-
-
-  return (
-    <>
-      <HeaderComponent />
-      <AboutComponent />
-      <ChefComponent />
-      <SpecialitiesComponent articles={articles} />
-      <ServiceComponent />
-      <ReservationComponent />
-      <ContactComponent />
-    </>
-  )
+    return (
+        <>
+            <header id="home">
+                <HeaderComponent />
+            </header>
+            <section id="about">
+                <AboutComponent />
+            </section>
+            <section id="chefs">
+                <ChefComponent />
+            </section>
+            <section id="menu">
+                <SpecialitiesComponent articles={articles} />
+            </section>
+            <section id="services">
+                <ServiceComponent />
+            </section>
+            <section id="reservation">
+                <ReservationComponent />
+            </section>
+            <section id="contact">
+                <ContactComponent />
+            </section>
+        </>
+    );
 }
 
-export default HomePage
-
+export default HomePage;
 
 //<a href="https://www.vecteezy.com/free-photos/elegant-food">Elegant Food Stock photos by Vecteezy</a>
 //<a href="https://www.vecteezy.com/free-photos/elegant-food">Elegant Food Stock photos by Vecteezy</a>

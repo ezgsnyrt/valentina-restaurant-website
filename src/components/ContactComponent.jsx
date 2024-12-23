@@ -42,3 +42,5 @@ const ContactComponent = () => {
 };
 
 export default ContactComponent;
+
+{/* <a href="https://www.vecteezy.com/free-photos/people-eating-at-restaurant">People Eating At Restaurant Stock photos by Vecteezy</a> */}

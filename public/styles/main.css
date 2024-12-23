@@ -12120,7 +12120,7 @@ header .carousel-item .carousel-caption p {
 }
 #section-chef .general-card-container .card-group .card .card-img-top {
   width: 100%;
-  height: auto;
+  min-height: 20rem;
   object-fit: cover;
   border-radius: 1rem;
 }
