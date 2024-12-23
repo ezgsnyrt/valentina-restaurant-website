@@ -23,9 +23,6 @@ function HomePage(){
       "img_src": ".././assets/specialities-image-four.jpg"
     },
     {
-      "img_src": ".././assets/specialities-image-five.jpg"
-    },
-    {
       "img_src": ".././assets/specialities-image-six.jpg"
     },
     {
@@ -33,22 +30,19 @@ function HomePage(){
     },
     {
       "img_src": ".././assets/specialities-image-eight.jpg"
-    },
-    {
-      "img_src": ".././assets/specialities-image-nine.jpg"
     }
   ])
 
 
   return (
-    <div>
+    <>
       <HeaderComponent />
       <AboutComponent />
       <ChefComponent />
-      {/* <SpecialitiesComponent articles={articles} />
-      <ServiceComponent />
+      <SpecialitiesComponent articles={articles} />
+      {/* <ServiceComponent />
       <ReservationComponent /> */}
-    </div>
+    </>
   )
 }
 
