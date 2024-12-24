@@ -60,8 +60,8 @@ function HomePage() {
             <section id="contact">
                 <ContactComponent />
             </section>
-            <div className="copyright mt-5">
-                <p className="copyright-text mt-5">Designed and created by Ezgi Senyurt-Erturk © 2024. All rights reserved.</p>
+            <div className="pt-5 ps-2 pe-2" style={{ backgroundColor: "#000000", color: "#ffffff", fontSize: "1.2rem"}}>
+                <p className="mb-0 pb-4 mt-5 text-md-center">Designed and created by Ezgi Senyurt-Erturk © 2024. All rights reserved.</p>
             </div>
         </>
     );
