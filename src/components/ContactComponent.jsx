@@ -7,7 +7,7 @@ const ContactComponent = () => {
             <div className="inner-section-container">
                 <h2 className="section-title">Contact Us</h2>
             </div>
-            <Container>
+            <Container className="mb-5">
                 <Card className="contact-card">
                     <Row className="align-items-center">
                         <Col lg={6} className="contact-image-container">

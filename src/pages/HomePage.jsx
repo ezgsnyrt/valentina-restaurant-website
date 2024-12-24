@@ -60,6 +60,9 @@ function HomePage() {
             <section id="contact">
                 <ContactComponent />
             </section>
+            <div className="copyright mt-5">
+                <p className="copyright-text mt-5">Designed and created by Ezgi Senyurt-Erturk © 2024. All rights reserved.</p>
+            </div>
         </>
     );
 }

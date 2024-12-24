@@ -26,25 +26,25 @@ function NavbarComponent() {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ms-auto navigation-menu">
-                        <Nav.Link href="#about" className="nav-link-custom">
+                        <Nav.Link href="#about" className="nav-link-custom mb-2 mt-2">
                             About
                         </Nav.Link>
-                        <Nav.Link href="#chefs" className="nav-link-custom">
+                        <Nav.Link href="#chefs" className="nav-link-custom mb-2 mt-2">
                             Chefs
                         </Nav.Link>
-                        <Nav.Link href="#menu" className="nav-link-custom">
+                        <Nav.Link href="#menu" className="nav-link-custom mb-2 mt-2">
                             Menu
                         </Nav.Link>
-                        <Nav.Link href="#services" className="nav-link-custom">
+                        <Nav.Link href="#services" className="nav-link-custom mb-2 mt-2">
                             Services
                         </Nav.Link>
                         <Nav.Link
                             href="#reservation"
-                            className="nav-link-custom"
+                            className="nav-link-custom mb-2 mt-2"
                         >
                             Reservation
                         </Nav.Link>
-                        <Nav.Link href="#contact" className="nav-link-custom">
+                        <Nav.Link href="#contact" className="nav-link-custom mb-2 mt-2">
                             Contact
                         </Nav.Link>
                     </Nav>
