@@ -60,6 +60,10 @@
     font-family: fonts.$primary-font-family;
 }
 
+body, html {
+    overflow: visible;
+}
+
 html {
     scroll-behavior: smooth;
 }

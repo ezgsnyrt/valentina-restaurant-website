@@ -7,6 +7,7 @@ import SpecialitiesComponent from "../components/SpecialitiesComponent";
 import ReservationComponent from "../components/ReservationComponent";
 import ContactComponent from "../components/ContactComponent";
 import { useState } from "react";
+import NavbarComponent from "../components/NavbarComponent";
 
 function HomePage() {
     const [articles, setArticles] = useState([
@@ -35,6 +36,9 @@ function HomePage() {
 
     return (
         <>
+            <div style={{ position: "sticky", top: "0", zIndex: "1050" }}>
+                <NavbarComponent />
+            </div>
             <header id="home">
                 <HeaderComponent />
             </header>

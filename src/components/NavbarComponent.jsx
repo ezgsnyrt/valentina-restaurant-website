@@ -11,21 +11,21 @@ function NavbarComponent() {
             collapseOnSelect
             expand="lg"
             data-bs-theme="dark"
-            className="bg-body-tertiary"
+            className="bg-body-tertiary sticky-top"
         >
             <Container>
                 <Navbar.Brand href="#home" className="navigation-logo">
                     <FontAwesomeIcon
                         icon={faV}
-                        size={"lg"}
+                        size={"xl"}
                         color={"white"}
-                        className="me-2"
+                        className="me-1"
                     />
                     <span>ALENTINA</span>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="me-auto navigation-menu">
+                    <Nav className="ms-auto navigation-menu">
                         <Nav.Link href="#about" className="nav-link-custom">
                             About
                         </Nav.Link>

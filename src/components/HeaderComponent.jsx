@@ -1,11 +1,9 @@
 import React from "react";
-import NavbarComponent from "./NavbarComponent";
 import Carousel from "react-bootstrap/Carousel";
 
 function HeaderComponent() {
   return (
-    <header>
-      <NavbarComponent />
+    <header >
       <Carousel data-bs-theme="dark">
         <Carousel.Item interval={10000}>
           <img
