@@ -23,13 +23,14 @@ const ReservationComponent = () => {
   });
 
   useEffect(() => {
-    console.log(formData)
+    // console.log(formData)
   }, [formData])
 
   const handleSubmit = (values) => {
-    console.log("event here")
+    // console.log("event here")
     setFormData(values);
-    console.log("values: ", values)
+    // console.log("values: ", values)
+    alert("Your reservation is successful!");
   }
 
   return (
