@@ -11932,6 +11932,11 @@ header .carousel-inner .carousel-caption p {
   letter-spacing: 0.3rem;
   font-style: italic;
 }
+header .carousel-control-next-icon,
+header .carousel-control-prev-icon {
+  width: 4rem;
+  height: 4rem;
+}
 
 @media (min-width: 769px) {
   .carousel-caption h5, .carousel-caption .h5 {
