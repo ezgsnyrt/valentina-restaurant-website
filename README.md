@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+# Valentina Restaurant Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This frontend project is a **modern restaurant website** built with **React.js, React Bootstrap, and SASS**. It provides a fully responsive user experience with dynamic components such as a **carousel header**, **sticky navigation bar**, **carousel galery**, and a **reservation form** powered by Formik and Yup.
 
-## Available Scripts
+---
+
+## 📦 Tech Stack
+
+- **React.js**
+- **SCSS (SASS)**
+- **React-Bootstrap**
+- **Formik & Yup**
+- **FontAwesome Icons**
+
+---
+
+## 📦 Project Features
+
+- **📐 Styling and Design:**
+   - **SASS-based styling** with custom fonts and colors for consistency.
+   - Fully functional and responsive design tailored for various screen sizes (mobile, tablet, desktop).
+   - The entire design and styling approach is uniquely crafted by me, emphasizing both aesthetics and usability.
+
+- **Header:**
+   - Fullscreen responsive carousel with dynamic height adjustment.
+   - Styled with **SASS variables** for consistency.
+   - Custom slide intervals and dynamic navbar height adjustment using `useEffect`.
+
+- **📌Sticky Navbar:**
+   - Fully responsive navigation bar using `React Bootstrap`.
+   - Collapsible design with a toggle button for smaller screens.
+   - Maintains visibility during scrolling with a `sticky-top` feature.
+
+- **ℹ️About Section:**
+   - Two-column layout with a styled **Learn More** button.
+
+- **👨‍🍳 Chef Section:**
+    - **Card-based layout** displaying individual chef profiles with images and titles.
+    - Integrated with **Font Awesome** social media icons for each chef.
+
+- **🍽️ Specialities Section:**
+    - Interactive **Image Card Gallery** with expanding card effect on click.
+    - Dynamic animation and scaling with **CSS Grid** and **useState**.
+    - Fully responsive with various breakpoints and flexible grid adjustments.
+
+- **🍷 Service Section:**
+    - **CardGroup** layout showcasing four services (private dining, catering, events).
+
+- **📅 Reservation Form:**
+   - Built with `Formik` and `Yup` for form handling and validation.
+   - Real-time validation feedback and custom error messages.
+   - Automatic form reset on successful submission.
+
+- **📞 Contact Section:**
+   - Two-column layout using `React Bootstrap`.
+   - Left-side image with a gradient overlay and right-side contact details.
+
+---
+
+## 📜 Available Scripts
 
 In the project directory, you can run:
 
 ### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Runs the app in development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view the app in your browser.
 
 ### `npm run build`
+Builds the app for production, creating an optimized bundle in the `build/` folder.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `npm test`
+Launches the test runner in watch mode.
 
 ### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Ejects the build configuration. **Use with caution!**
