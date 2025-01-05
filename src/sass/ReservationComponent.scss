@@ -50,13 +50,22 @@
                 }
 
                 &.is-invalid {
-                    border-color: #dc3545;
+                    border-color: colors.$invalid-info-color;
                 }
+            }
+
+            // Style of date and time icons during validation
+            input[type="date"].is-invalid,
+            input[type="time"].is-invalid {
+                border-color: colors.$invalid-info-color;
+                padding-right: 2.5rem;
+                position: relative;
+                background-position: right 10px center;
             }
 
             .invalid-feedback {
                 font-size: fonts.$xsmall-font-size;
-                color: #dc3545;
+                color: colors.$invalid-info-color;
             }
 
             button[type="submit"] {

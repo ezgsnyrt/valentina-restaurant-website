@@ -26,11 +26,12 @@ const ReservationComponent = () => {
     // console.log(formData)
   }, [formData])
 
-  const handleSubmit = (values) => {
+  const handleSubmit = (values, { resetForm }) => {
     // console.log("event here")
     setFormData(values);
     // console.log("values: ", values)
     alert("Your reservation is successful!");
+    resetForm();
   }
 
   return (

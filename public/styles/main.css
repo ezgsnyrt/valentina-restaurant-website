@@ -11847,8 +11847,6 @@ textarea.form-control-lg {
 }
 .navbar {
   width: 100%;
-  position: absolute;
-  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -11865,9 +11863,6 @@ textarea.form-control-lg {
   text-shadow: -3px 0 #ffffff, 0 1px #ffffff, 1px 0 #ffffff, 0 -1px #ffffff;
   text-decoration: none;
 }
-.navbar .container #responsive-navbar-nav .navigation-menu {
-  margin-right: 0 !important;
-}
 .navbar .container #responsive-navbar-nav .navigation-menu .nav-link-custom {
   display: inline-block;
   position: relative;
@@ -11878,7 +11873,6 @@ textarea.form-control-lg {
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
-  padding: 0.5rem;
 }
 .navbar .container #responsive-navbar-nav .navigation-menu .nav-link-custom:after {
   position: absolute;
@@ -11902,7 +11896,6 @@ textarea.form-control-lg {
 }
 
 header {
-  position: relative;
   width: 100%;
   height: 100vh;
 }
@@ -12466,6 +12459,13 @@ header .carousel-item .carousel-caption p {
 #section-reservation .container form .form-control.is-invalid {
   border-color: #dc3545;
 }
+#section-reservation .container form input[type=date].is-invalid,
+#section-reservation .container form input[type=time].is-invalid {
+  border-color: #dc3545;
+  padding-right: 2.5rem;
+  position: relative;
+  background-position: right 10px center;
+}
 #section-reservation .container form .invalid-feedback {
   font-size: 0.9rem;
   color: #dc3545;
@@ -12496,7 +12496,7 @@ header .carousel-item .carousel-caption p {
   }
 }
 #section-contact {
-  padding: 3rem 1rem;
+  padding: 3rem 1rem 1rem 1rem;
   background-color: #000000;
 }
 #section-contact .contact-card {
@@ -12615,6 +12615,10 @@ header .carousel-item .carousel-caption p {
   padding: 0;
   box-sizing: border-box;
   font-family: "Alegreya Sans SC", sans-serif;
+}
+
+body, html {
+  overflow: visible;
 }
 
 html {
