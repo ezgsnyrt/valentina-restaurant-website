@@ -2,9 +2,10 @@ header {
     width: 100%;
     height: 100vh;
 
-    .carousel-item {
-        height: 100vh;
+    .carousel-inner {
+        height: 100%;
         width: 100%;
+        position: relative;
 
         img {
             height: 100vh;
@@ -13,31 +14,43 @@ header {
             overflow: hidden;
         }
 
-        .carousel-caption h5,
-        .carousel-caption p {
-            color: colors.$primary-color;
-            font-family: fonts.$text-font-family;
-        }
+        .carousel-caption {
+            position: absolute;
+            bottom: 25%;
+            transform: translateY(50%);
+            text-align: center;
 
-        .carousel-caption h5 {
-            font-size: fonts.$xlarge-font-size;
-            font-weight: fonts.$semi-bold-font-weight;
-            letter-spacing: 0.1rem;
-            letter-spacing: fonts.$xsmall-letter-spacing;
-        }
+            h5,
+            p {
+                color: colors.$primary-color;
+                font-family: fonts.$text-font-family;
+            }
 
-        .carousel-caption p {
-            font-size: fonts.$small-font-size;
-            font-weight: fonts.$normal-font-weight;
-            letter-spacing: fonts.$small-letter-spacing;
-            font-style: italic;
+            h5 {
+                font-weight: fonts.$semi-bold-font-weight;
+                letter-spacing: 0.1rem;
+                letter-spacing: fonts.$xsmall-letter-spacing;
+            }
+
+            p {
+                font-size: fonts.$small-font-size;
+                font-weight: fonts.$normal-font-weight;
+                letter-spacing: fonts.$small-letter-spacing;
+                font-style: italic;
+            }
         }
     }
 }
 
-@media screen and (max-width: 768px) {
+@media (min-width: 769px) {
     .carousel-caption h5 {
-        font-size: fonts.$large-font-size !important;
+        font-size: fonts.$xlarge-font-size;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-caption h5 {
+        font-size: fonts.$large-font-size
     }
 
     .carousel-indicators {
@@ -45,9 +58,9 @@ header {
     }
 }
 
-@media screen and (max-width: 480px) {
+@media (max-width: 480px) {
     .carousel-caption h5 {
-        font-size: fonts.$large-font-size !important;
+        font-size: fonts.$large-font-size
     }
 
     .carousel-caption p {
@@ -55,8 +68,3 @@ header {
         padding-top: 1rem;
     }
 }
-
-// .carousel {
-//     position: static;
-//     overflow: visible;
-// }

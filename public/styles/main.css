@@ -11899,45 +11899,56 @@ header {
   width: 100%;
   height: 100vh;
 }
-header .carousel-item {
-  height: 100vh;
+header .carousel-inner {
+  height: 100%;
   width: 100%;
+  position: relative;
 }
-header .carousel-item img {
+header .carousel-inner img {
   height: 100vh;
   object-fit: cover;
   object-position: center;
   overflow: hidden;
 }
-header .carousel-item .carousel-caption h5, header .carousel-item .carousel-caption .h5,
-header .carousel-item .carousel-caption p {
+header .carousel-inner .carousel-caption {
+  position: absolute;
+  bottom: 25%;
+  transform: translateY(50%);
+  text-align: center;
+}
+header .carousel-inner .carousel-caption h5, header .carousel-inner .carousel-caption .h5,
+header .carousel-inner .carousel-caption p {
   color: #FFFFFF;
   font-family: "Open Sans", sans-serif;
 }
-header .carousel-item .carousel-caption h5, header .carousel-item .carousel-caption .h5 {
-  font-size: 3rem;
+header .carousel-inner .carousel-caption h5, header .carousel-inner .carousel-caption .h5 {
   font-weight: 600;
   letter-spacing: 0.1rem;
   letter-spacing: 0.2rem;
 }
-header .carousel-item .carousel-caption p {
+header .carousel-inner .carousel-caption p {
   font-size: 1.1rem;
   font-weight: 500;
   letter-spacing: 0.3rem;
   font-style: italic;
 }
 
-@media screen and (max-width: 768px) {
+@media (min-width: 769px) {
   .carousel-caption h5, .carousel-caption .h5 {
-    font-size: 2.2rem !important;
+    font-size: 3rem;
+  }
+}
+@media (max-width: 768px) {
+  .carousel-caption h5, .carousel-caption .h5 {
+    font-size: 2.2rem;
   }
   .carousel-indicators {
     display: none;
   }
 }
-@media screen and (max-width: 480px) {
+@media (max-width: 480px) {
   .carousel-caption h5, .carousel-caption .h5 {
-    font-size: 2.2rem !important;
+    font-size: 2.2rem;
   }
   .carousel-caption p {
     font-size: 1.1rem;

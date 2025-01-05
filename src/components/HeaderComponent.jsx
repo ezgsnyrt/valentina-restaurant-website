@@ -1,7 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Carousel from "react-bootstrap/Carousel";
 
 function HeaderComponent() {
+
+    // Adjust height dynamically based on navbar height
+    useEffect(() => {
+      const adjustCarouselHeight = () => {
+          const navbarHeight = document.querySelector(".navbar")?.offsetHeight || 0;
+          const carouselElement = document.querySelector(".carousel");
+
+          if (carouselElement instanceof HTMLElement) {
+              carouselElement.style.height = `${window.innerHeight - navbarHeight}px`;
+          }
+      };
+
+      adjustCarouselHeight();
+      window.addEventListener("resize", adjustCarouselHeight);
+
+      // Cleanup listener
+      return () => window.removeEventListener("resize", adjustCarouselHeight);
+  }, []);
+
+
   return (
     <header >
       <Carousel data-bs-theme="dark">
